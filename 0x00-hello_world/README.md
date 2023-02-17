@@ -1,1 +1,1 @@
-a script that compiles a C file and creates an executable name
+C programming that prints out put of world
