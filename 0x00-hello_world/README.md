@@ -1,1 +1,1 @@
-C programming that prints out put of world
+a script that generates the assembly code 
