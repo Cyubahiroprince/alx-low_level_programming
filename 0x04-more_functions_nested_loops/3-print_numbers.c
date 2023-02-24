@@ -1,16 +1,17 @@
 #include "main.h"
 /**
  * print_numbers - print the number from 0 to 9
- *@n:print_numbers
  * Return: always 0
  */
-void print_numbers(void n)
+void print_numbers(void)
 {
-	if (n >= '0' && n <= '9')
-	_putchar (n);
-	_putchar ("\n");
+	char c;
 
-	else
-		return (0);
+	for (c = 0; c <= 9; c++)
+	{
+		_putchar(c + '0');
+
+	}
+	_putchar("\n");
 }
 
