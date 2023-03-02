@@ -7,16 +7,19 @@
 
 void print_number(int n)
 {
-	int n1;
+	int i = 1, j = n;
 
 	if (n < 0)
 	{
 	_putchar('-');
-	n1 = -n;
+	j = -j;
 	}
-	if (n1 / 10 != 0)
+	while (j / i > 9)
+	i *= 10;
+
+	while (i > 0)
 	{
-	print_number(n1 / 10);
+	_putchar((j / i) % 10 + '0');
+	i /= 10;
 	}
-	_putchar((n1 % 10) + '0');
 }
