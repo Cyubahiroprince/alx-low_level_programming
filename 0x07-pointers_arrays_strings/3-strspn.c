@@ -2,12 +2,13 @@
 /**
  *  _strspn -  function that gets the length of a prefix substring
  *  @s: apointer to the string
- *  @accept: a pointer to the string 
- *  Return : unsigned integer of s
+ *  @accept: a pointer to the string
+ *  Return: _strspin
  */
 unsigned int _strspn(char *s, char *accept)
 {
 	int i, j;
+	unsigned int c = 0;
 
 	for (i = 0; s[i]; i++)
 	{
@@ -15,12 +16,12 @@ unsigned int _strspn(char *s, char *accept)
 	{
 	if (s[i] == accept[j])
 	{
-	break;
+	c++;
 	}
 	}
 	if (!accept[j])
 	{
-	return (i);
+	break;
 	}
 	}
 	return (i);
