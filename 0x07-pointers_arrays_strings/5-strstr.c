@@ -11,7 +11,7 @@ char *_strstr(char *hystack, char *needle)
 	char *hystack_len = hystack;
 	char *needle_len = needle;
 
-	for (; *hystack != '\0'; hystack++)
+	for (;*hystack != '\0'; hystack++)
 	{
 	while (*hystack_len == *needle_len && *hystack_len != '\0')
 	{
