@@ -3,8 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-
-int _atoi(char *s)
+char *_strncat(char *dest, char *src, int n)
 {
 	return (0);
 }
