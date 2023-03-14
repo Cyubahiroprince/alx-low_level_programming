@@ -3,21 +3,18 @@
 #include <string.h>
 /**
  * _strdup -  function returns a pointer to the duplicated string
- * @str: a pointer to the string
+ * @str: to check
  * Return: NULL
  */
 char *_strdup(char *str)
 {
-	char *new_str = malloc(strlen(str) + 1);
-
-	if (new_str == NULL)
-	{
-	return (NULL);
-	}
-	if (str == NULL)
-	{
-	return (NULL);
-	}
-	strcpy(new_str, str);
-	return (new_str);
+if (str == NULL)
+{
+return (NULL);
+}
+else
+{
+char *to = strdup(str);
+return (to);
+}
 }
