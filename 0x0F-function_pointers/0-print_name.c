@@ -1,11 +1,13 @@
 #include "function_pointers.h"
 #include <stdio.h>
 /**
- * print_name - function that prints name
- * @name: pointer print name
- * @f: pointer
+ * print_name - prints name used pointer to function
+ * @name: character to add
+ * @f: function pointer
  */
 void print_name(char *name, void (*f)(char *))
 {
-	(*f)(name);
+	if (name == NULL && f == NULL)
+		return;
+	f(name);
 }
