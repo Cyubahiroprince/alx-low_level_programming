@@ -1,55 +1,26 @@
-#include <stdio.h>
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
+
 /**
- *_atoi - converts a string to an integer
- *@s: the string to be converted
- *Return: 0 if no numbers in string, converted number otherwise
+ * main - prints the multiplication of two integers
+ * @argc: argument count
+ * @argv: argument vector
+ * Return: 0 if it works, 1 if there is an ERROR
  */
-int _atoi(char *s)
+
+int main(int argc, char **argv)
 {
-	int i, sign = 1, flag = 0, output;
-	unsigned int result = 0;
+	int n, m, diff;
 
-	for (i = 0;  s[i] != '\0' && flag != 2; i++)
+	if (argc != 3)
 	{
-	if (s[i] == '-')
-	sign *= -1;
-	if (s[i] >= '0' && s[i] <= '9')
-	{
-	flag = 1;
-	result *= 10;
-	result += (s[i] - '0');
+		printf("Error\n");
+		return (1);
 	}
-	else if (flag == 1)
-	flag = 2;
-	}
-	if (sign == -1)
-	output = -result;
-	else
-	output = result;
-	return (output);
-}
-/**
- * main - multiplies two numbers
- * @argc: number of arguments
- * @argv: array of arguments
- * Return: 0 (success), 1 (Error)
- */
-int main(int argc, char *argv[])
-{
-	int result, num1, num2;
-
-	if (argc < 3 || argc > 3)
-	{
-	printf("Error\n");
-	return (1);
-	}
-	num1 = _atoi(argv[1]);
-	num2 = _atoi(argv[2]);
-	result = num1 + num2;
-
-	printf("%d\n", result);
-
+	n = atoi(argv[1]);
+	m = atoi(argv[2]);
+	diff = n * m;
+	printf("%i\n", diff);
 	return (0);
 }
-
