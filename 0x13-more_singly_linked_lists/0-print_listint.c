@@ -1,7 +1,5 @@
 #include "lists.h"
 #include <stdio.h>
-#include <stddef.h>
-
 /**
  * print_listint - This function prints all the elements of a listint_t list
  * @h: The pointer to the struct listint_t
